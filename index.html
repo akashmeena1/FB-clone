@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Socialbook - Facebook Clone</title>
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/1475dcf3d8.js"></script>
+  </head>
+  <body>
+    <!--Navbar-->
+
+    <nav>
+      <div class="nav-left">
+        <img src="./images/logo.png" alt="logo" class="logo" />
+        <ul>
+          <li>
+            <img src="./images/notification.png" alt="notification icon" />
+          </li>
+          <li>
+            <img src="./images/inbox.png" alt="inbox icon" />
+          </li>
+          <li>
+            <img src="./images/video.png" alt="video icon" />
+          </li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="search-box">
+          <img src="./images/search.png" alt="search icon" />
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="nav-user-icon online" onclick="showMenu()">
+          <img src="./images/profile-pic.png" alt="user profile icon" />
+        </div>
+      </div>
+      <div class="settings-menu">
+        <div id="dark-btn">
+          <span></span>
+        </div>
+        <div class="settings-menu-inner">
+          <div class="user-profile">
+            <img src="./images/profile-pic.png" alt="user image" />
+            <div>
+              <p>John Doe</p>
+              <a href="#">See your profile </a>
+            </div>
+          </div>
+          <hr />
+          <div class="user-profile">
+            <img src="./images/feedback.png" alt="user image" />
+            <div>
+              <p>Feedback</p>
+              <a href="#">Help us improve user experience.</a>
+            </div>
+          </div>
+          <hr />
+          <div class="settings-links">
+            <img
+              src="./images/setting.png"
+              alt="setting image"
+              class="settings-icon"
+            />
+            <a href="#"
+              >Settings &amp; Privacy
+              <img src="./images/arrow.png" alt="arrow img" width="10px" />
+            </a>
+          </div>
+          <div class="settings-links">
+            <img
+              src="./images/help.png"
+              alt="help image"
+              class="settings-icon"
+            />
+            <a href="#"
+              >Help &amp; Support
+              <img src="./images/arrow.png" alt="arrow img" width="10px" />
+            </a>
+          </div>
+          <div class="settings-links">
+            <img
+              src="./images/display.png"
+              alt="display image"
+              class="settings-icon"
+            />
+            <a href="#"
+              >Display &amp; Accessibility
+              <img src="./images/arrow.png" alt="arrow img" width="10px" />
+            </a>
+          </div>
+          <div class="settings-links">
+            <img
+              src="./images/logout.png"
+              alt="display image"
+              class="settings-icon"
+            />
+            <a href="#"
+              >Logout
+              <img src="./images/arrow.png" alt="arrow img" width="10px" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--NAvbar end-->
+
+    <!-- main -->
+
+    <div class="container">
+      <div class="left-sidebar">
+        <div class="imp-links">
+          <a href="#">
+            <img src="./images/news.png" alt="news image" />
+            latest news
+          </a>
+          <a href="#">
+            <img src="./images/friends.png" alt="friends image" />
+            friends
+          </a>
+          <a href="#">
+            <img src="./images/group.png" alt="group image" />
+            group
+          </a>
+          <a href="#">
+            <img src="./images/marketplace.png" alt="marketplace image" />
+            marketplace
+          </a>
+          <a href="#">
+            <img src="./images/watch.png" alt="watch image" />
+            watch
+          </a>
+          <a href="#" class="see-more">See More</a>
+        </div>
+        <div class="short-cut-links">
+          <p>Your Shortcuts</p>
+          <a href="#">
+            <img src="./images/shortcut-1.png" alt="shortcut-1" />
+            Web Developers
+          </a>
+          <a href="#">
+            <img src="./images/shortcut-2.png" alt="shortcut-2" />
+            Full Stack Developers
+          </a>
+          <a href="#">
+            <img src="./images/shortcut-3.png" alt="shortcut-3" />
+            MERN Stack Developer
+          </a>
+          <a href="#">
+            <img src="./images/shortcut-4.png" alt="shortcut-4" />
+            MEAN Stack Developers
+          </a>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="story-gallery">
+          <div class="story story-1">
+            <img src="./images/upload.png" alt="upload image" />
+            <p>Post Story</p>
+          </div>
+          <div class="story story-2">
+            <img src="./images/member-4.png" alt="upload image" />
+            <p>Jeffry Doe</p>
+          </div>
+          <div class="story story-3">
+            <img src="./images/member-2.png" alt="upload image" />
+            <p>John Doe</p>
+          </div>
+          <div class="story story-4">
+            <img src="./images/member-1.png" alt="upload image" />
+            <p>Jane Doe</p>
+          </div>
+          <div class="story story-5">
+            <img src="./images/member-3.png" alt="upload image" />
+            <p>Jenny Doe</p>
+          </div>
+        </div>
+
+        <div class="write-post-container">
+          <div class="user-profile">
+            <img src="./images/profile-pic.png" alt="user image" />
+            <div>
+              <p>John Doe</p>
+              <small>Public <i class="fas fa-sort-down"></i> </small>
+            </div>
+          </div>
+          <div class="post-input-container">
+            <textarea rows="3" placeholder="Post Something..."></textarea>
+            <div class="add-post-links">
+              <a href="#">
+                <img src="./images/live-video.png" alt="post video" />
+                Live
+              </a>
+              <a href="#">
+                <img src="./images/photo.png" alt="post photo/video" />
+                Photo/Video
+              </a>
+              <a href="#">
+                <img src="./images/feeling.png" alt="post Activity" />
+                Feeling/Activity
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="./images/profile-pic.png" alt="user image" />
+              <div>
+                <p>John Doe</p>
+                <span>18<sup>th</sup> July 2021, 08:09 pm</span>
+              </div>
+            </div>
+            <a href="#">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+          </div>
+          <p class="post-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Perspiciatis, explicabo. Laudantium enim hic est libero iusto
+            facilis veritatis fuga, modi neque deleniti quia labore tenetur,
+            ducimus id tempora optio quis.
+            <a href="#">#LoremIpsum</a>
+            <a href="#">#youtube</a>
+            <a href="#">#coding</a>
+          </p>
+          <img src="./images/feed-image-1.png" alt="feed 1" class="post-img" />
+          <div class="post-row">
+            <div class="activity-icons">
+              <div>
+                <img src="./images/like-blue.png" alt="like png" />
+                745
+              </div>
+              <div>
+                <img src="./images/comments.png" alt="comment png" />
+                612
+              </div>
+              <div>
+                <img src="./images/share.png" alt="share png" />
+                531
+              </div>
+            </div>
+            <div class="post-profile-icon">
+              <img src="./images/profile-pic.png" alt="user profile" />
+              <i class="fas fa-sort-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="./images/profile-pic.png" alt="user image" />
+              <div>
+                <p>John Doe</p>
+                <span>15<sup>th</sup> July 2021, 09:59 pm</span>
+              </div>
+            </div>
+            <a href="#">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+          </div>
+          <p class="post-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
+            ipsam illum nemo, veritatis delectus assumenda!
+            <a href="#">#LoremIpsum</a>
+            <a href="#">#youtube</a>
+            <a href="#">#coding</a>
+          </p>
+          <img src="./images/feed-image-2.png" alt="feed 2" class="post-img" />
+          <div class="post-row">
+            <div class="activity-icons">
+              <div>
+                <img src="./images/like-blue.png" alt="like png" />
+                327
+              </div>
+              <div>
+                <img src="./images/comments.png" alt="comment png" />
+                124
+              </div>
+              <div>
+                <img src="./images/share.png" alt="share png" />
+                311
+              </div>
+            </div>
+            <div class="post-profile-icon">
+              <img src="./images/profile-pic.png" alt="user profile" />
+              <i class="fas fa-sort-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="./images/profile-pic.png" alt="user image" />
+              <div>
+                <p>John Doe</p>
+                <span>18<sup>th</sup> July 2021, 08:09 pm</span>
+              </div>
+            </div>
+            <a href="#">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+          </div>
+          <p class="post-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi
+            cum perferendis tenetur quidem, possimus iure repudiandae est totam
+            voluptatibus quo dignissimos aspernatur animi aperiam assumenda
+            molestiae explicabo libero ratione ea, facere laudantium iusto?
+            Dicta, est!
+            <a href="#">#LoremIpsum</a>
+            <a href="#">#youtube</a>
+            <a href="#">#coding</a>
+          </p>
+          <img src="./images/feed-image-3.png" alt="feed 3" class="post-img" />
+          <div class="post-row">
+            <div class="activity-icons">
+              <div>
+                <img src="./images/like-blue.png" alt="like png" />
+                531
+              </div>
+              <div>
+                <img src="./images/comments.png" alt="comment png" />
+                251
+              </div>
+              <div>
+                <img src="./images/share.png" alt="share png" />
+                112
+              </div>
+            </div>
+            <div class="post-profile-icon">
+              <img src="./images/profile-pic.png" alt="user profile" />
+              <i class="fas fa-sort-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="./images/profile-pic.png" alt="user image" />
+              <div>
+                <p>John Doe</p>
+                <span>18<sup>th</sup> July 2021, 08:09 pm</span>
+              </div>
+            </div>
+            <a href="#">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+          </div>
+          <p class="post-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Perspiciatis, explicabo. Laudantium enim hic est libero iusto
+            facilis veritatis fuga, modi neque deleniti quia labore tenetur,
+            ducimus id tempora optio quis.
+            <a href="#">#LoremIpsum</a>
+            <a href="#">#youtube</a>
+            <a href="#">#coding</a>
+          </p>
+          <img src="./images/feed-image-4.png" alt="feed 4" class="post-img" />
+          <div class="post-row">
+            <div class="activity-icons">
+              <div>
+                <img src="./images/like-blue.png" alt="like png" />
+                372
+              </div>
+              <div>
+                <img src="./images/comments.png" alt="comment png" />
+                110
+              </div>
+              <div>
+                <img src="./images/share.png" alt="share png" />
+                79
+              </div>
+            </div>
+            <div class="post-profile-icon">
+              <img src="./images/profile-pic.png" alt="user profile" />
+              <i class="fas fa-sort-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-container">
+          <div class="post-row">
+            <div class="user-profile">
+              <img src="./images/profile-pic.png" alt="user image" />
+              <div>
+                <p>John Doe</p>
+                <span>18<sup>th</sup> July 2021, 08:09 pm</span>
+              </div>
+            </div>
+            <a href="#">
+              <i class="fas fa-ellipsis-v"></i>
+            </a>
+          </div>
+          <p class="post-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+            dignissimos ad!
+            <a href="#">#LoremIpsum</a>
+            <a href="#">#youtube</a>
+            <a href="#">#coding</a>
+          </p>
+          <img src="./images/feed-image-5.png" alt="feed 5" class="post-img" />
+          <div class="post-row">
+            <div class="activity-icons">
+              <div>
+                <img src="./images/like-blue.png" alt="like png" />
+                447
+              </div>
+              <div>
+                <img src="./images/comments.png" alt="comment png" />
+                365
+              </div>
+              <div>
+                <img src="./images/share.png" alt="share png" />
+                132
+              </div>
+            </div>
+            <div class="post-profile-icon">
+              <img src="./images/profile-pic.png" alt="user profile" />
+              <i class="fas fa-sort-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="load-more-btn">
+          Load more <i class="fas fa-sort-down"></i>
+        </button>
+      </div>
+
+      <div class="right-sidebar">
+        <div class="sidebar-title">
+          <h4>Events</h4>
+          <a href="#"> See all </a>
+        </div>
+        <div class="event">
+          <div class="left-event">
+            <h3>18<sup>th</sup></h3>
+            <span>July 2021</span>
+          </div>
+          <div class="right-event">
+            <h4><i class="fas fa-calendar-day"></i> Social Media</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Online Event</p>
+            <a href="#"> <i class="fas fa-caret-right"></i> More Info</a>
+          </div>
+        </div>
+        <div class="event">
+          <div class="left-event">
+            <h3>13<sup>th</sup></h3>
+            <span>July 2021</span>
+          </div>
+          <div class="right-event">
+            <h4><i class="fas fa-calendar-day"></i> Interview Scheduled</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Skype Call</p>
+            <a href="#"> <i class="fas fa-caret-right"></i> More Info</a>
+          </div>
+        </div>
+        <div class="event">
+          <div class="left-event">
+            <h3>11<sup>th</sup></h3>
+            <span>July 2021</span>
+          </div>
+          <div class="right-event">
+            <h4><i class="fas fa-calendar-day"></i> Coding Competition</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Hacker Earth</p>
+            <a href="#"> <i class="fas fa-caret-right"></i> More Info</a>
+          </div>
+        </div>
+        <div class="sidebar-title">
+          <h4>Advertisements</h4>
+          <a href="#"> Close </a>
+        </div>
+        <img
+          src="./images/advertisement.png"
+          alt="ad image"
+          class="sidebar-ads"
+        />
+        <div class="sidebar-title">
+          <h4>Conversations</h4>
+          <a href="#"> Hide Chat </a>
+        </div>
+        <div class="online-list">
+          <div class="online">
+            <img src="./images/member-1.png" alt="member-1" />
+          </div>
+          <p>Jane Doe</p>
+        </div>
+        <div class="online-list">
+          <div class="online">
+            <img src="./images/member-2.png" alt="member-2" />
+          </div>
+          <p>John Doe</p>
+        </div>
+        <div class="online-list">
+          <div class="online">
+            <img src="./images/member-3.png" alt="member-3" />
+          </div>
+          <p>Jenny Doe</p>
+        </div>
+        <div class="online-list">
+          <div class="online">
+            <img src="./images/member-4.png" alt="member-4" />
+          </div>
+          <p>Jeffry Doe</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- main end-->
+
+    <!-- Footer -->
+
+    <div class="footer">
+      <p><a href="#">Amir Shaikh</a> | &copy; All rights reserved 2021.</p>
+    </div>
+
+    <!-- Footer end -->
+
+    <!-- custom script -->
+    <script src="./app.js"></script>
+  </body>
+</html>
